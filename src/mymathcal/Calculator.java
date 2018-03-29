@@ -28,7 +28,7 @@ public class Calculator extends javax.swing.JFrame {
     
     double num,something;
     boolean equaled = false;
-    int calulcation;
+    int calculation;
     
     public Calculator() {
         initComponents();
@@ -41,7 +41,7 @@ public class Calculator extends javax.swing.JFrame {
             something = Double.parseDouble(jTextField1.getText());
            }
         
-        switch(calulcation)
+        switch(calculation)
         {      
                 case 1: // addition 
                 num = num + something; //converts string to double
@@ -439,28 +439,28 @@ public class Calculator extends javax.swing.JFrame {
 
     private void AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddActionPerformed
          num = Double.parseDouble(jTextField1.getText());
-         calulcation = 1; //refers to case 1 addtion 
+         calculation = 1; //refers to case 1 addtion 
          jTextField1.setText(""); // clears text field
          equaled = false;
     }//GEN-LAST:event_AddActionPerformed
 
     private void minusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minusActionPerformed
          num = Double.parseDouble(jTextField1.getText());
-         calulcation = 2; //refers to case 2 subtration  
+         calculation = 2; //refers to case 2 subtration  
          jTextField1.setText(""); // clears text field
          equaled = false;
     }//GEN-LAST:event_minusActionPerformed
 
     private void timesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timesActionPerformed
          num = Double.parseDouble(jTextField1.getText());
-         calulcation = 3; //refers to case mutpily
+         calculation = 3; //refers to case mutpily
          jTextField1.setText(""); // clears text field
          equaled = false;
     }//GEN-LAST:event_timesActionPerformed
     
     private void DivideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DivideActionPerformed
          num = Double.parseDouble(jTextField1.getText());
-         calulcation = 4; //refers to case 4 division
+         calculation = 4; //refers to case 4 division
          jTextField1.setText(""); // clears text field
          equaled = false;
     }//GEN-LAST:event_DivideActionPerformed
@@ -525,7 +525,7 @@ public class Calculator extends javax.swing.JFrame {
 
     private void decimialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_decimialActionPerformed
         // TODO add your handling code here:
-        jTextField1.setText(jTextField1.getText() + "."); //sets text field to . and places it next to number placed on screen.
+        //jTextField1.setText(jTextField1.getText() + "."); //sets text field to . and places it next to number placed on screen.
         String temp = jTextField1.getText();
         temp = (jTextField1.getText() + ".");
         if (Double.isNaN(Double.parseDouble(temp)) == false){
