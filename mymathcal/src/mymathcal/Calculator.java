@@ -146,7 +146,6 @@ public class Calculator extends javax.swing.JFrame {
         setTitle("Calculator");
         setLocation(new java.awt.Point(500, 250));
         setResizable(false);
-        setType(java.awt.Window.Type.UTILITY);
 
         jTextField1.setEditable(false);
         jTextField1.setFont(new java.awt.Font("Tahoma", 1, 23)); // NOI18N
