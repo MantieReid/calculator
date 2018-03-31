@@ -27,7 +27,7 @@ public class Calculator extends javax.swing.JFrame {
     
     
     double num,something;
-    boolean equaled = false;
+    boolean ansGenerated = false;
     int calculation;
     
     public Calculator() {
@@ -37,7 +37,7 @@ public class Calculator extends javax.swing.JFrame {
     
     public  void  arithmetic_operation()
     {
-        if (equaled == false) {
+        if (ansGenerated == false) {
             something = Double.parseDouble(jTextField1.getText());
            }
         
@@ -65,9 +65,19 @@ public class Calculator extends javax.swing.JFrame {
                 jTextField1.setText(Double.toString(num)); //converets double to string. 
                 break; 
         }
-        equaled = true;
+        ansGenerated = true;
     }
     
+    public void clear()
+    {
+        jTextField1.setText(""); //Clear Textbox.
+        
+        //Clear all variables.
+        num = 0;
+        something = 0;
+        ansGenerated = false;
+        calculation = 0;
+    }
     
     JButton buttonlist[] = new JButton[23]; //array to hold all of the buttons in a collection.
     //Every single Button except for the on and off buttons.
@@ -415,9 +425,8 @@ public class Calculator extends javax.swing.JFrame {
                     .addComponent(Divide, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(decimial, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(Equals, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(decimial, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Equals, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(NumberZero, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(20, Short.MAX_VALUE))
         );
@@ -426,9 +435,8 @@ public class Calculator extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClearActionPerformed
-        // TODO add your handling code here:
-        jTextField1.setText(""); //sets textbox to Nothing.
-        //removes all text from the text box. 
+        //clear text and reset all variables
+        clear();
     }//GEN-LAST:event_ClearActionPerformed
 
     private void offActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_offActionPerformed
@@ -437,49 +445,49 @@ public class Calculator extends javax.swing.JFrame {
     }//GEN-LAST:event_offActionPerformed
 
     private void AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddActionPerformed
-         num = Double.parseDouble(jTextField1.getText());
-         calculation = 1; //refers to case 1 addtion 
+         calculation = 1; //refers to case 1 addtion  
+         num = Double.parseDouble(jTextField1.getText()); 
          jTextField1.setText(""); // clears text field
-         equaled = false;
+         ansGenerated = false;
     }//GEN-LAST:event_AddActionPerformed
 
     private void minusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minusActionPerformed
-         num = Double.parseDouble(jTextField1.getText());
-         calculation = 2; //refers to case 2 subtration  
+         calculation = 2; //refers to case 2 subtration 
+         num = Double.parseDouble(jTextField1.getText()); 
          jTextField1.setText(""); // clears text field
-         equaled = false;
+         ansGenerated = false;
     }//GEN-LAST:event_minusActionPerformed
 
     private void timesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timesActionPerformed
-         num = Double.parseDouble(jTextField1.getText());
-         calculation = 3; //refers to case mutpily
+         calculation = 3; //refers to case mutpily 
+         num = Double.parseDouble(jTextField1.getText()); 
          jTextField1.setText(""); // clears text field
-         equaled = false;
+         ansGenerated = false;
     }//GEN-LAST:event_timesActionPerformed
     
     private void DivideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DivideActionPerformed
-         num = Double.parseDouble(jTextField1.getText());
          calculation = 4; //refers to case 4 division
+         num = Double.parseDouble(jTextField1.getText());
          jTextField1.setText(""); // clears text field
-         equaled = false;
+         ansGenerated = false;
     }//GEN-LAST:event_DivideActionPerformed
 
     private void Number7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number7ActionPerformed
-        // TODO add your handling code here:
-     jTextField1.setText(jTextField1.getText() + "7"); //sets text field to 7 and places it next to number placed on screen.
-
+        if (ansGenerated == true){clear();} //reset if an answer was just generated
+     
+        jTextField1.setText(jTextField1.getText() + "7"); //sets text field to 7 and places it next to number placed on screen.
     }//GEN-LAST:event_Number7ActionPerformed
 
     private void Number9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number9ActionPerformed
-        // TODO add your handling code here:
-  jTextField1.setText(jTextField1.getText() + "9"); //sets text field to 9 and places it next to number placed on screen.
-
+        if (ansGenerated == true){clear();} //reset if an answer was just generated
+     
+        jTextField1.setText(jTextField1.getText() + "9"); //sets text field to 9 and places it next to number placed on screen.
     }//GEN-LAST:event_Number9ActionPerformed
 
     private void Number8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number8ActionPerformed
-        // TODO add your handling code here:
-     jTextField1.setText(jTextField1.getText() + "8"); //sets text field to 8 and places it next to number placed on screen.
-
+        if (ansGenerated == true){clear();} //reset if an answer was just generated
+     
+        jTextField1.setText(jTextField1.getText() + "8"); //sets text field to 8 and places it next to number placed on screen.
     }//GEN-LAST:event_Number8ActionPerformed
 
     private void OnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OnActionPerformed
@@ -488,71 +496,98 @@ public class Calculator extends javax.swing.JFrame {
     }//GEN-LAST:event_OnActionPerformed
 
     private void Number4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number4ActionPerformed
-        // TODO add your handling code here:
-      jTextField1.setText(jTextField1.getText() + "4");
-
+        if (ansGenerated == true){clear();} //reset if an answer was just generated
+     
+        jTextField1.setText(jTextField1.getText() + "4");
     }//GEN-LAST:event_Number4ActionPerformed
 
     private void Number5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number5ActionPerformed
-     jTextField1.setText(jTextField1.getText() + "5");
+        if (ansGenerated == true){clear();} //reset if an answer was just generated
+     
+        jTextField1.setText(jTextField1.getText() + "5");
     }//GEN-LAST:event_Number5ActionPerformed
 
-    private void Number6ActionPerformed(java.awt.event.ActionEvent evt) {                                        
-     jTextField1.setText(jTextField1.getText() + "6");
+    private void Number6ActionPerformed(java.awt.event.ActionEvent evt) {
+        if (ansGenerated == true){clear();} //reset if an answer was just generated
+        
+        jTextField1.setText(jTextField1.getText() + "6");
     }
 
     private void Number1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number1ActionPerformed
-        // TODO add your handling code here:
+        if (ansGenerated == true){clear();} //reset if an answer was just generated
+     
         jTextField1.setText(jTextField1.getText() + "1"); //sets text field to one and places it next to number placed on screen.
     
     }//GEN-LAST:event_Number1ActionPerformed
 
     private void Number2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number2ActionPerformed
-        // TODO add your handling code here:
+        if (ansGenerated == true){clear();} //reset if an answer was just generated
+     
         jTextField1.setText(jTextField1.getText() + "2"); //sets text field to two and places it next to number that is on the screen
     }//GEN-LAST:event_Number2ActionPerformed
 
     private void Number3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number3ActionPerformed
-        // TODO add your handling code here:
+        if (ansGenerated == true){clear();} //reset if an answer was just generated
+     
         jTextField1.setText(jTextField1.getText() + "3"); //sets text field 3 four and places it next to number placed on screen.
     }//GEN-LAST:event_Number3ActionPerformed
 
     private void NumberZeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumberZeroActionPerformed
-        // TODO add your handling code here:
-     jTextField1.setText(jTextField1.getText() + "0"); //sets text field to 0 and places it next to number placed on screen.
+     if (ansGenerated == true){clear();} //reset if an answer was just generated
+     
+     //dont add extra zeroes if the current text is zero
+     if (jTextField1.getText().equals("0") == false)
+     {
+        jTextField1.setText(jTextField1.getText() + "0"); //sets text field to 0 and places it next to number placed on screen.
+     }
     }//GEN-LAST:event_NumberZeroActionPerformed
 
     private void decimialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_decimialActionPerformed
-        // TODO add your handling code here:
-           String temp = jTextField1.getText();
-        temp = (jTextField1.getText() + ".");
-        if (Double.isNaN(Double.parseDouble(temp)) == false){
+        if (ansGenerated == false)
+        {
+            //check if text box is empty
+            if (jTextField1.getText().length() == 0 ){
+            jTextField1.setText("0.");
+            }
+            
+            String temp = jTextField1.getText() + ".";
+            //check to make sure the modified string is a number elsewise
+            if (Double.isNaN(Double.parseDouble(temp)) == false){
             jTextField1.setText(temp);
+            }
         }
-        
+        else
+        {
+            //reset if an answer was just generated
+            clear();
+            
+            jTextField1.setText("0.");
+        }
     }//GEN-LAST:event_decimialActionPerformed
 
     private void EqualsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EqualsActionPerformed
+        //calculate answer
         arithmetic_operation();
-        
-       // jLabel1.setText("");
+        //String temp = jTextField1.getText();;
+        //jTextField1.setText(temp.substring(0, Math.min(temp.length(), 14)) );
     }//GEN-LAST:event_EqualsActionPerformed
 
     private void backspaceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backspaceActionPerformed
-        // TODO add your handling code here:
-        int length = jTextField1.getText().length();//gets length of the string 
-        int number = jTextField1.getText().length() -1;  //subtracts one from the string
-        String store;
-        
-        if(length > 0)
+        if (ansGenerated == false)
         {
-            StringBuilder back = new StringBuilder(jTextField1.getText());
-            //String builder creates empty String builder, which is used to store strings. 
-            //back is object of stringbuuilder.
-            back.deleteCharAt(number); //used to dekete a single a character from a spefcic postion. 
-            store=back.toString();
-            jTextField1.setText(store);
-               
+            int length = jTextField1.getText().length();//gets length of the string 
+            int number = jTextField1.getText().length() -1;  //subtracts one from the string
+            String store;
+        
+            if(length > 0)
+            {
+                StringBuilder back = new StringBuilder(jTextField1.getText());
+                //String builder creates empty String builder, which is used to store strings. 
+                //back is object of stringbuuilder.
+                back.deleteCharAt(number); //used to dekete a single a character from a spefcic postion. 
+                store=back.toString();
+                jTextField1.setText(store);    
+            }
         }
     }//GEN-LAST:event_backspaceActionPerformed
 
