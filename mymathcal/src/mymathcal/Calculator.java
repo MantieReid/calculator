@@ -2,26 +2,20 @@ package mymathcal;
 
 import java.awt.Color;
 import java.awt.Component;
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.*;
 import java.util.HashSet;
 import java.util.Set;
 import javax.swing.JButton;
 
-public class Calculator extends javax.swing.JFrame {
-    /**
-     * Creates new form Calculator
-     * 
-     */
-    double num = 0, parsedText;
-    boolean ansGenerated = false;
-    int calculation = 0;
-    
+public class Calculator extends javax.swing.JFrame {    
     public Calculator() {
         initComponents();
     }
-    
+   	
+    double answer = 0, parsedText;
+    boolean equalPressed = false;
+    int calculation = 0;
     
     public double calculate(int operation, double num1, double num2)
     {
@@ -52,16 +46,12 @@ public class Calculator extends javax.swing.JFrame {
         jTextField1.setText(""); //Clear Textbox.
         
         //Clear all variables.
-        num = 0;
+        answer = 0;
         parsedText = 0;
-        ansGenerated = false;
+        equalPressed = false;
         calculation = 0;
     }
     
-    //JButton buttonlist[] = new JButton[23]; //array to hold all of the buttons in a collection.
-    //Every single Button except for the on and off buttons.
-    
-    @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -92,7 +82,7 @@ public class Calculator extends javax.swing.JFrame {
         setResizable(false);
 
         jTextField1.setEditable(false);
-        jTextField1.setFont(new java.awt.Font("Tahoma", 1, 23)); // NOI18N
+        jTextField1.setFont(new java.awt.Font("Tahoma", 1, 19)); // NOI18N
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
         Clear.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -248,60 +238,56 @@ public class Calculator extends javax.swing.JFrame {
             .addComponent(jTextField1)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(Number7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Number4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Number1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(NumberZero, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(NumberZero, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
+                            .addComponent(Number1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Number4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Number7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(decimial, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(Equals, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(Number5)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(Number6))
+                                        .addComponent(Number5, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(Number6, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(Number8)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(Number9, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(Number2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(Number3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(Number2)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(Number3)))
-                                .addGap(4, 4, 4)
+                                        .addComponent(Number8, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(Number9, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(10, 10, 10)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(Divide, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(times, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(minus, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(decimial, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(Equals, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(minus, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Divide, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(backspace, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addComponent(backspace, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(Clear, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Add, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(14, Short.MAX_VALUE))
+                        .addGap(10, 10, 10)
+                        .addComponent(Add, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
-
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {Add, Clear, Divide, Number3, Number6, Number9, minus, times});
-
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {Number1, Number2, Number4, Number5, Number7, Number8, NumberZero, decimial});
-
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Add, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Clear, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(backspace, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(Clear, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(backspace, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Number7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -324,12 +310,9 @@ public class Calculator extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(decimial, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Equals, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(NumberZero, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(NumberZero, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {Add, Clear, Divide, Number3, Number6, Number9, minus, times});
-
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {Number1, Number2, Number4, Number5, Number7, Number8, NumberZero, decimial});
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -340,154 +323,132 @@ public class Calculator extends javax.swing.JFrame {
     }//GEN-LAST:event_ClearActionPerformed
 
     private void AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddActionPerformed
-         parsedText = Double.parseDouble(jTextField1.getText());
+        parsedText = Double.parseDouble(jTextField1.getText());
          
-         //only run if there was not a recent answer generated by hitting equals
-         if (ansGenerated == false){
+        //only run if there was not a recent answer generated by hitting equals
+        if (equalPressed == false){
             //this only happens right after a clear or the begining of the program
             if(calculation == 0)
             {
-                num = parsedText;
+                answer = parsedText;
             }
             //otherwise, run calculations as normal
             else
             {
-            num = calculate(calculation, num, parsedText);
+                answer = calculate(calculation, answer, parsedText);
             }   
-            ansGenerated = false;
-         }
-
-         calculation = 1; //refers to case 1 addtion  
-         jTextField1.setText(""); // clears text field
+            equalPressed = false;
+        }
+         
+        calculation = 1; //refers to case 1 addtion  
+        jTextField1.setText(""); // clears text field
+        equalPressed = false;
     }//GEN-LAST:event_AddActionPerformed
 
     private void minusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minusActionPerformed
-         parsedText = Double.parseDouble(jTextField1.getText());
+        parsedText = Double.parseDouble(jTextField1.getText());
          
+        //only run if there was not a recent answer generated by hitting equals
+        if (equalPressed == false){
+            //this only happens right after a clear or the begining of the program
+            if(calculation == 0)
+            {
+                answer = parsedText;
+            }
+            //otherwise, run calculations as normal
+            else
+            {
+                answer = calculate(calculation, answer, parsedText);
+            }   
+            equalPressed = false;
+        }
          
-         //this only happens right after a clear or the begining of the program
-         if(calculation == 0)
-         {
-             num = parsedText;
-         }
-         //otherwise, run calculations as normal
-         else
-         {
-            num = calculate(calculation, num, parsedText);
-         }
-         
-         calculation = 2; //refers to case 2 subtraction  
-         jTextField1.setText(""); // clears text field
-         ansGenerated = false;
+        calculation = 2; //refers to case 2 subtraction  
+        jTextField1.setText(""); // clears text field
+        equalPressed = false;
     }//GEN-LAST:event_minusActionPerformed
 
     private void timesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timesActionPerformed
-         parsedText = Double.parseDouble(jTextField1.getText());
+        parsedText = Double.parseDouble(jTextField1.getText());
          
-         //this only happens right after a clear or the begining of the program
-         if(calculation == 0)
-         {
-             num = parsedText;
-         }
-         //otherwise, run calculations as normal
-         else
-         {
-            num = calculate(calculation, num, parsedText);
-         }
-         
-         calculation = 3; //refers to case 3 multiplication 
-         jTextField1.setText(""); // clears text field
-         ansGenerated = false;
+        //only run if there was not a recent answer generated by hitting equals
+        if (equalPressed == false){
+            //this only happens right after a clear or the begining of the program
+            if(calculation == 0)
+            {
+                answer = parsedText;
+            }
+            //otherwise, run calculations as normal
+            else
+            {
+                answer = calculate(calculation, answer, parsedText);
+            }   
+            equalPressed = false;
+        }
+            
+        calculation = 3; //refers to case 3 multiplication 
+        jTextField1.setText(""); // clears text field
+        equalPressed = false;
     }//GEN-LAST:event_timesActionPerformed
     
     private void DivideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DivideActionPerformed
-         parsedText = Double.parseDouble(jTextField1.getText());
+        parsedText = Double.parseDouble(jTextField1.getText());
          
-         //this only happens right after a clear or the begining of the program
-         if(calculation == 0)
-         {
-             num = parsedText;
-         }
-         //otherwise, run calculations as normal
-         else
-         {
-            num = calculate(calculation, num, parsedText);
-         }
+        //only run if there was not a recent answer generated by hitting equals
+        if (equalPressed == false){
+            //this only happens right after a clear or the begining of the program
+            if(calculation == 0)
+            {
+                answer = parsedText;
+            }
+            //otherwise, run calculations as normal
+            else
+            {
+                answer = calculate(calculation, answer, parsedText);
+            }   
+            equalPressed = false;
+        }
          
-         calculation = 4; //refers to case 4 division 
-         jTextField1.setText(""); // clears text field
-         ansGenerated = false;
+        calculation = 4; //refers to case 4 division 
+        jTextField1.setText(""); // clears text field
+        equalPressed = false;
     }//GEN-LAST:event_DivideActionPerformed
 
-    // <editor-fold defaultstate="collapsed" desc="Number Buttons">
-    private void Number7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number7ActionPerformed
-        if (ansGenerated == true){clear();} //reset if an answer was just generated
-     
-        jTextField1.setText(jTextField1.getText() + "7"); //sets text field to 7 and places it next to number placed on screen.
-    }//GEN-LAST:event_Number7ActionPerformed
-
-    private void Number9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number9ActionPerformed
-        if (ansGenerated == true){clear();} //reset if an answer was just generated
-     
-        jTextField1.setText(jTextField1.getText() + "9"); //sets text field to 9 and places it next to number placed on screen.
-    }//GEN-LAST:event_Number9ActionPerformed
-
-    private void Number8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number8ActionPerformed
-        if (ansGenerated == true){clear();} //reset if an answer was just generated
-     
-        jTextField1.setText(jTextField1.getText() + "8"); //sets text field to 8 and places it next to number placed on screen.
-    }//GEN-LAST:event_Number8ActionPerformed
-
-    private void Number4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number4ActionPerformed
-        if (ansGenerated == true){clear();} //reset if an answer was just generated
-     
-        jTextField1.setText(jTextField1.getText() + "4");
-    }//GEN-LAST:event_Number4ActionPerformed
-
-    private void Number5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number5ActionPerformed
-        if (ansGenerated == true){clear();} //reset if an answer was just generated
-     
-        jTextField1.setText(jTextField1.getText() + "5");
-    }//GEN-LAST:event_Number5ActionPerformed
-
-    private void Number6ActionPerformed(java.awt.event.ActionEvent evt) {
-        if (ansGenerated == true){clear();} //reset if an answer was just generated
+    private void EqualsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EqualsActionPerformed
+        if (equalPressed == false) {
+            parsedText = Double.parseDouble(jTextField1.getText());
+        }
         
-        jTextField1.setText(jTextField1.getText() + "6");
-    }
+        //dont do anything if there is no calculations to do
+        if (calculation != 0)
+        {
+            answer = calculate(calculation, answer, parsedText);
+            jTextField1.setText(Double.toString(answer)); //converets double to string. 
+            equalPressed = true;
+        }
+    }//GEN-LAST:event_EqualsActionPerformed
 
-    private void Number1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number1ActionPerformed
-        if (ansGenerated == true){clear();} //reset if an answer was just generated
-     
-        jTextField1.setText(jTextField1.getText() + "1"); //sets text field to one and places it next to number placed on screen.
-    
-    }//GEN-LAST:event_Number1ActionPerformed
+    private void backspaceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backspaceActionPerformed
+        if (equalPressed == false)
+        {
+            int length = jTextField1.getText().length();//gets length of the string 
+            int number = jTextField1.getText().length() -1;  //subtracts one from the string
+            String store;
+        
+            if(length > 0)
+            {
+                StringBuilder back = new StringBuilder(jTextField1.getText());
+                //String builder creates empty String builder, which is used to store strings. 
+                //back is object of stringbuuilder.
+                back.deleteCharAt(number); //used to dekete a single a character from a spefcic postion. 
+                store=back.toString();
+                jTextField1.setText(store);    
+            }
+        }
+    }//GEN-LAST:event_backspaceActionPerformed
 
-    private void Number2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number2ActionPerformed
-        if (ansGenerated == true){clear();} //reset if an answer was just generated
-     
-        jTextField1.setText(jTextField1.getText() + "2"); //sets text field to two and places it next to number that is on the screen
-    }//GEN-LAST:event_Number2ActionPerformed
-
-    private void Number3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number3ActionPerformed
-        if (ansGenerated == true){clear();} //reset if an answer was just generated
-     
-        jTextField1.setText(jTextField1.getText() + "3"); //sets text field 3 four and places it next to number placed on screen.
-    }//GEN-LAST:event_Number3ActionPerformed
-
-    private void NumberZeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumberZeroActionPerformed
-     if (ansGenerated == true){clear();} //reset if an answer was just generated
-     
-     //dont add extra zeroes if the current text is zero
-     if (jTextField1.getText().equals("0") == false)
-     {
-        jTextField1.setText(jTextField1.getText() + "0"); //sets text field to 0 and places it next to number placed on screen.
-     }
-    }//GEN-LAST:event_NumberZeroActionPerformed
-// </editor-fold> 
-    
-    private void decimialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_decimialActionPerformed
-        if (ansGenerated == false)
+ 	private void decimialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_decimialActionPerformed
+        if (equalPressed == false)
         {
             //check if text box is empty
             if (jTextField1.getText().length() == 0 ){
@@ -509,43 +470,73 @@ public class Calculator extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_decimialActionPerformed
 
-    private void EqualsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EqualsActionPerformed
-        if (ansGenerated == false) {
-            parsedText = Double.parseDouble(jTextField1.getText());
-        }
-        
-        //dont do anything if there is no calculations to do
-        if (calculation != 0)
-        {
-            num = calculate(calculation, num, parsedText);
-            String Formatednum = Double.toString(num);
-            DecimalFormat dc = new DecimalFormat("0.00");
-            String Formattednum = dc.format(num);
-            
-            jTextField1.setText((Formattednum));
-            ansGenerated = true;
-        }
-    }//GEN-LAST:event_EqualsActionPerformed
+    // <editor-fold defaultstate="collapsed" desc="Number Buttons">
+    private void Number7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number7ActionPerformed
+        if (equalPressed == true){clear();} //reset if an answer was just generated
+     
+        jTextField1.setText(jTextField1.getText() + "7"); //sets text field to 7 and places it next to number placed on screen.
+    }//GEN-LAST:event_Number7ActionPerformed
 
-    private void backspaceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backspaceActionPerformed
-        if (ansGenerated == false)
-        {
-            int length = jTextField1.getText().length();//gets length of the string 
-            int number = jTextField1.getText().length() -1;  //subtracts one from the string
-            String store;
-        
-            if(length > 0)
-            {
-                StringBuilder back = new StringBuilder(jTextField1.getText());
-                //String builder creates empty String builder, which is used to store strings. 
-                //back is object of stringbuuilder.
-                back.deleteCharAt(number); //used to dekete a single a character from a spefcic postion. 
-                store=back.toString();
-                jTextField1.setText(store);    
-            }
-        }
-    }//GEN-LAST:event_backspaceActionPerformed
+    private void Number9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number9ActionPerformed
+        if (equalPressed == true){clear();} //reset if an answer was just generated
+     
+        jTextField1.setText(jTextField1.getText() + "9"); //sets text field to 9 and places it next to number placed on screen.
+    }//GEN-LAST:event_Number9ActionPerformed
 
+    private void Number8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number8ActionPerformed
+        if (equalPressed == true){clear();} //reset if an answer was just generated
+     
+        jTextField1.setText(jTextField1.getText() + "8"); //sets text field to 8 and places it next to number placed on screen.
+    }//GEN-LAST:event_Number8ActionPerformed
+
+    private void Number4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number4ActionPerformed
+        if (equalPressed == true){clear();} //reset if an answer was just generated
+     
+        jTextField1.setText(jTextField1.getText() + "4");
+    }//GEN-LAST:event_Number4ActionPerformed
+
+    private void Number5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number5ActionPerformed
+        if (equalPressed == true){clear();} //reset if an answer was just generated
+     
+        jTextField1.setText(jTextField1.getText() + "5");
+    }//GEN-LAST:event_Number5ActionPerformed
+
+    private void Number6ActionPerformed(java.awt.event.ActionEvent evt) {
+        if (equalPressed == true){clear();} //reset if an answer was just generated
+        
+        jTextField1.setText(jTextField1.getText() + "6");
+    }
+
+    private void Number1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number1ActionPerformed
+        if (equalPressed == true){clear();} //reset if an answer was just generated
+     
+        jTextField1.setText(jTextField1.getText() + "1"); //sets text field to one and places it next to number placed on screen.
+    
+    }//GEN-LAST:event_Number1ActionPerformed
+
+    private void Number2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number2ActionPerformed
+        if (equalPressed == true){clear();} //reset if an answer was just generated
+     
+        jTextField1.setText(jTextField1.getText() + "2"); //sets text field to two and places it next to number that is on the screen
+    }//GEN-LAST:event_Number2ActionPerformed
+
+    private void Number3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number3ActionPerformed
+        if (equalPressed == true){clear();} //reset if an answer was just generated
+     
+        jTextField1.setText(jTextField1.getText() + "3"); //sets text field 3 four and places it next to number placed on screen.
+    }//GEN-LAST:event_Number3ActionPerformed
+
+    private void NumberZeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumberZeroActionPerformed
+     if (equalPressed == true){clear();} //reset if an answer was just generated
+     
+     //dont add extra zeroes if the current text is zero
+     if (jTextField1.getText().equals("0") == false)
+     {
+        jTextField1.setText(jTextField1.getText() + "0"); //sets text field to 0 and places it next to number placed on screen.
+     }
+    }//GEN-LAST:event_NumberZeroActionPerformed
+	// </editor-fold> 
+    
     // <editor-fold defaultstate="collapsed" desc="More Generated Code">
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

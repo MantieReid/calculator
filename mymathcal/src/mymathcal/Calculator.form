@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.9" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
     <Component class="javax.swing.ButtonGroup" name="buttonGroup1">
     </Component>
@@ -35,57 +35,57 @@
           <Component id="jTextField1" alignment="0" max="32767" attributes="0"/>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="Number7" linkSize="5" alignment="1" max="32767" attributes="0"/>
-                          <Component id="Number4" linkSize="5" alignment="1" max="32767" attributes="0"/>
-                          <Component id="Number1" linkSize="5" alignment="1" max="32767" attributes="0"/>
-                          <Component id="NumberZero" linkSize="5" alignment="1" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="NumberZero" pref="43" max="32767" attributes="0"/>
+                          <Component id="Number1" alignment="0" max="32767" attributes="0"/>
+                          <Component id="Number4" alignment="0" max="32767" attributes="0"/>
+                          <Component id="Number7" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="decimial" min="-2" pref="43" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="Equals" max="32767" attributes="0"/>
+                          </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="Number5" linkSize="5" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="Number6" linkSize="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Number5" min="-2" pref="43" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="Number6" min="-2" pref="43" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="Number8" linkSize="5" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="Number9" linkSize="3" min="-2" pref="45" max="-2" attributes="0"/>
+                                      <Component id="Number2" min="-2" pref="43" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="Number3" min="-2" pref="43" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="Number2" linkSize="5" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="Number3" linkSize="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Number8" min="-2" pref="43" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="Number9" min="-2" pref="43" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="Divide" linkSize="3" max="32767" attributes="0"/>
-                                  <Component id="times" linkSize="3" max="32767" attributes="0"/>
-                                  <Component id="minus" linkSize="3" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="times" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="minus" alignment="0" min="-2" pref="43" max="-2" attributes="0"/>
+                                  <Component id="Divide" alignment="0" min="-2" pref="43" max="-2" attributes="0"/>
                               </Group>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="decimial" linkSize="5" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                              <Component id="Equals" min="-2" pref="94" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="backspace" min="-2" pref="100" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="Clear" linkSize="3" min="-2" pref="43" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="Add" linkSize="3" max="32767" attributes="0"/>
+                      <Component id="backspace" max="32767" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="Clear" min="-2" pref="43" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                      <Component id="Add" min="-2" pref="43" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="14" max="32767" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -93,39 +93,42 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <Component id="jTextField1" min="-2" pref="41" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="Add" linkSize="4" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                  <Component id="Clear" linkSize="4" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                  <Component id="backspace" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="Add" alignment="0" min="-2" pref="35" max="-2" attributes="0"/>
+                  <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                      <Component id="Clear" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                      <Component id="backspace" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="Number7" linkSize="6" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                  <Component id="Number8" linkSize="6" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                  <Component id="Number9" linkSize="4" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                  <Component id="minus" linkSize="4" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="Number7" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="Number8" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="Number9" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="minus" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="Number4" linkSize="6" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                  <Component id="Number5" linkSize="6" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                  <Component id="Number6" linkSize="4" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                  <Component id="times" linkSize="4" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="Number4" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="Number5" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="Number6" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="times" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="Number1" linkSize="6" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                  <Component id="Number2" linkSize="6" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                  <Component id="Number3" linkSize="4" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                  <Component id="Divide" linkSize="4" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="Number1" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="Number2" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="Number3" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="Divide" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="decimial" linkSize="6" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="decimial" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
                   <Component id="Equals" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
-                  <Component id="NumberZero" linkSize="6" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="NumberZero" min="-2" pref="30" max="-2" attributes="0"/>
               </Group>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -135,7 +138,7 @@
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="23" style="1"/>
+          <Font name="Tahoma" size="19" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="4"/>
       </Properties>
