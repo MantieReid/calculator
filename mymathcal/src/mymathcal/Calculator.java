@@ -70,9 +70,9 @@ public class Calculator extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
-        jDialog1 = new javax.swing.JDialog();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        jFrame1 = new javax.swing.JFrame();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
         jTextField1 = new javax.swing.JTextField();
         Clear = new javax.swing.JButton();
         backspace = new javax.swing.JButton();
@@ -94,26 +94,41 @@ public class Calculator extends javax.swing.JFrame {
         Equals = new javax.swing.JButton();
         jMenuBar2 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("\tAbout \n\n\tMade By \n\n\tMantie Reid II\n\n\tCasey");
-        jTextArea1.setWrapStyleWord(true);
-        jScrollPane2.setViewportView(jTextArea1);
+        jFrame1.setMaximumSize(new java.awt.Dimension(252, 252));
+        jFrame1.setMinimumSize(new java.awt.Dimension(252, 252));
+        jFrame1.setPreferredSize(new java.awt.Dimension(252, 252));
+        jFrame1.setResizable(false);
 
-        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
-        jDialog1.getContentPane().setLayout(jDialog1Layout);
-        jDialog1Layout.setHorizontalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialog1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29))
+        jScrollPane1.setHorizontalScrollBar(null);
+        jScrollPane1.setMaximumSize(new java.awt.Dimension(252, 252));
+        jScrollPane1.setMinimumSize(new java.awt.Dimension(252, 252));
+        jScrollPane1.setName(""); // NOI18N
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(252, 252));
+
+        jTextArea2.setEditable(false);
+        jTextArea2.setColumns(20);
+        jTextArea2.setRows(5);
+        jTextArea2.setText("\tAbout\n\n\tMade By \n\n\tMantie Reid II \n\n\tCasey\n\n");
+        jTextArea2.setAutoscrolls(false);
+        jTextArea2.setMaximumSize(new java.awt.Dimension(252, 252));
+        jTextArea2.setMinimumSize(new java.awt.Dimension(252, 252));
+        jTextArea2.setPreferredSize(new java.awt.Dimension(338, 185));
+        jScrollPane1.setViewportView(jTextArea2);
+
+        javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
+        jFrame1.getContentPane().setLayout(jFrame1Layout);
+        jFrame1Layout.setHorizontalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        jDialog1Layout.setVerticalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+        jFrame1Layout.setVerticalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
+
+        setResizable(false);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculator");
@@ -271,6 +286,15 @@ public class Calculator extends javax.swing.JFrame {
         });
 
         jMenu3.setText("About");
+
+        jMenuItem1.setText("About");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem1);
+
         jMenuBar2.add(jMenu3);
 
         setJMenuBar(jMenuBar2);
@@ -655,6 +679,13 @@ public class Calculator extends javax.swing.JFrame {
         //a number button has been pressed, we cant insert the negative symbol for sure now
         cleared = false;
     }//GEN-LAST:event_NumberZeroActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+        jFrame1.setVisible(true); //makes it visible
+        //jFrame1.setSize(jFrame1.getPreferredSize()); //sets size to perffred size(or elese it will pop up as a small window)
+        jFrame1.setResizable(false); // makes it not resizable
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 	// </editor-fold> 
     
     // <editor-fold defaultstate="collapsed" desc="More Generated Code">
@@ -708,11 +739,12 @@ public class Calculator extends javax.swing.JFrame {
     private javax.swing.JButton backspace;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton decimial;
-    private javax.swing.JDialog jDialog1;
+    private javax.swing.JFrame jFrame1;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar2;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JButton minus;
     private javax.swing.JButton times;
