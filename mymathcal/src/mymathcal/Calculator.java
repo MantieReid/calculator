@@ -13,8 +13,32 @@ import javax.swing.JButton;
 import java.text.DecimalFormat;
 
 public class Calculator extends javax.swing.JFrame {    
+     JButton buttons[] =  new JButton[23];
+       
     public Calculator() {
         initComponents();
+      
+     
+
+       buttons[0] =  NumberZero;
+       buttons[1] =  Number1;
+       buttons[2] =  Number2;
+       buttons[3] = Number3;
+       buttons[4] = Number4;
+       buttons[5] = Number5;
+       buttons[6] = Number6;
+       buttons[7] = Number7;
+       buttons[8] = Number8;
+       buttons[9] = Number9;
+       buttons[10] = minus;
+       buttons[11] = times;
+       buttons[12] = Add;
+       buttons[13] = Divide;
+       buttons[14] = Clear;
+       buttons[15] = backspace;
+       buttons[16] = decimial;
+       buttons[17] = Equals;
+       
     }
    	
     double answer = 0, parsedText;
@@ -49,6 +73,22 @@ public class Calculator extends javax.swing.JFrame {
     }
     
    //File file1 =  new File("mymathcal/about.html").toURI();
+   
+   
+   
+   public  void Changecolorstomatrixtheme()
+   {
+      
+       for(int i = 0; i < buttons.length; i++)
+       {
+           buttons[i].setBackground(Color.black);
+           buttons[i].setForeground(Color.green);
+         
+           
+           
+       }
+       
+   }
    
    
    
@@ -95,6 +135,8 @@ public class Calculator extends javax.swing.JFrame {
         jMenuBar2 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
 
         jFrame1.setMaximumSize(new java.awt.Dimension(252, 252));
         jFrame1.setMinimumSize(new java.awt.Dimension(252, 252));
@@ -132,6 +174,8 @@ public class Calculator extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculator");
+        setBackground(java.awt.Color.black);
+        setForeground(java.awt.Color.cyan);
         setLocation(new java.awt.Point(500, 250));
         setResizable(false);
 
@@ -296,6 +340,18 @@ public class Calculator extends javax.swing.JFrame {
         jMenu3.add(jMenuItem1);
 
         jMenuBar2.add(jMenu3);
+
+        jMenu1.setText("Color");
+
+        jMenuItem2.setText("Change to matrix theme color");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem2);
+
+        jMenuBar2.add(jMenu1);
 
         setJMenuBar(jMenuBar2);
 
@@ -686,6 +742,12 @@ public class Calculator extends javax.swing.JFrame {
         //jFrame1.setSize(jFrame1.getPreferredSize()); //sets size to perffred size(or elese it will pop up as a small window)
         jFrame1.setResizable(false); // makes it not resizable
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        
+            Changecolorstomatrixtheme();
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 	// </editor-fold> 
     
     // <editor-fold defaultstate="collapsed" desc="More Generated Code">
@@ -740,9 +802,11 @@ public class Calculator extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton decimial;
     private javax.swing.JFrame jFrame1;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextField jTextField1;
