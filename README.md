@@ -1,4 +1,4 @@
-# calculator
+# Calculator
 
 
 This is a calculator that does basic math. 
