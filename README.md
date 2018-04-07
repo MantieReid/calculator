@@ -12,4 +12,4 @@ Special Thanks
 
 Thanks goes to casey for helping me fix most of the bugs.  I couldn’t have done it without him. 
 
-![Alt Text](https://i.imgur.com/N31AoSj.gifv)
+
