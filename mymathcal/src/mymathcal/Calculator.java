@@ -159,7 +159,7 @@ public class Calculator extends javax.swing.JFrame {
         jTextArea2.setEditable(false);
         jTextArea2.setColumns(20);
         jTextArea2.setRows(5);
-        jTextArea2.setText("\tAbout\n\n\tMade By \n\n\tMantie Reid II \n\n\tCasey\n\n");
+        jTextArea2.setText("\tAbout\n\n\tMade By \n\n\tMantie Reid II \n\n\tCasey Thomas\n\n");
         jTextArea2.setAutoscrolls(false);
         jTextArea2.setMaximumSize(new java.awt.Dimension(252, 252));
         jTextArea2.setMinimumSize(new java.awt.Dimension(252, 252));
