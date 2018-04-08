@@ -12,4 +12,4 @@ Special Thanks
 
 Thanks goes to Casey Thomas for helping me fix most of the bugs.  I couldn’t have done it without him. 
 
-![alt text](https://github.com/MantieReid/calculator/blob/master/2018-04-07_14-59-26.gif)
+![alt text](https://github.com/MantieReid/calculator/blob/master/1_2.gif)
