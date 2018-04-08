@@ -328,8 +328,9 @@ public class Calculator extends javax.swing.JFrame {
             }
         });
 
-        Divide.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
-        Divide.setText("/");
+        Divide.setFont(new java.awt.Font("Tahoma", 0, 19)); // NOI18N
+        Divide.setText("÷");
+        Divide.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         Divide.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DivideActionPerformed(evt);
