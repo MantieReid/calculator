@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="mymathcal/src"/>
+	<classpathentry kind="lib" path="mymathcal/dist/lib/beansbinding-1.2.1.jar"/>
+	<classpathentry kind="lib" path="mymathcal/dist/mymathcal.jar"/>
+	<classpathentry kind="output" path="mymathcal/build/classes"/>
+</classpath>

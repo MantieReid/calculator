@@ -51,7 +51,8 @@ public class Calculator extends javax.swing.JFrame {
                             //and no number buttons have been pressed yet.
     int calculation = 0;
     
-    ///the core of the program. It does the math. The case will be excuted if called upon. 
+    
+    ///the core of the program. It does the math. The case will be executed if called upon. 
     public double calculate(int operation, double num1, double num2)
     {
         double ans = 0;
@@ -59,25 +60,61 @@ public class Calculator extends javax.swing.JFrame {
         {      
                 case 1: // addition 
                 ans = (num1 + num2);
+                System.out.println("\n num1 is "  + num1); //for debugging, prints the value of num1
+                System.out.println("\n num2 is "  + num2); //for debugging, prints the value of num2
+                System.out.println("\n" + num1 +  "  +  " + num2 + "  =  " + ans );
+
+                System.out.println("\n ans is " + ans); //for debugging, prints the value of ans
+ 
                 break;
                 
                 case 2: // subtraction
                 ans = (num1 - num2);
+                System.out.println("\n num1 is "  + num1); //for debugging, prints the value of num1 
+                System.out.println("\n num2 is "  + num2 ); //for debugging, prints the value of num2
+               System.out.println("\n" + num1 +  " - " + num2 + " = " + ans );
+
+                System.out.println("\n ans is " + ans); //for debugging, prints the value of  ans
                 break;
                 
-                case 3: // Mutiplication
+                case 3: // Multiplication
                 ans = (num1 * num2);
+                System.out.println("\n num1 is "  + num1); //for debugging, prints the value of num1 
+                System.out.println("\n num2 is "  + num2); //for debugging, prints the value of num2
+                System.out.println("\n" +num1 +  " * " + num2 + " = " + ans );
+
+                System.out.println("\n ans is "  + ans); //for debugging, prints the value of ans
                 break;
                 
                 case 4: // division
-                ans = num1 / num2;
+                ans = (num1 / num2);
+                System.out.println("\n num1 is "  + num1); //for debugging, prints the value of num1 
+                System.out.println("\n num2 is "  + num2 ); //for debugging, prints the value of num2
+                
+                System.out.println("\n" + num1 +  " / " + num2 + " = " + ans );
+                System.out.println("\n ans is "  + ans); //for debugging,  prints the value of ans
+                
+                
+
                 break;
         }
-
+                
+        
         return ans;
+       
+        
+        
+        
     }
     
    
+ 
+//The first Numbers that are entered after clicking any of the math operator buttons(+,-  ,*,��)  get stored into the value holder called num1.
+
+//Then numbers that are entered after that are stored into num2. After you hit the equal button. 
+
+//Finally, the sum, product etc of those two value holders goes to ans.  Finally, the value of ans is then placed in the textbox. 
+
    
    //method to change the colors of the buttons and Jpanels to a matrix look
    public  void Changecolorstomatrixtheme()
@@ -114,8 +151,13 @@ public class Calculator extends javax.swing.JFrame {
         cleared = true;
     }
     
-    //automatic generated code. 
+    //automatic generated code By Netbeans GUI designer. 
     //try not to touch this
+    //changed division symbol.  It was not working properly when running from eclipse. 
+    //Fixed a couple of spelling mistakes. 
+
+    
+    
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -328,7 +370,7 @@ public class Calculator extends javax.swing.JFrame {
             }
         });
 
-        Divide.setFont(new java.awt.Font("Tahoma", 0, 19)); // NOI18N
+        Divide.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Divide.setText("÷");
         Divide.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         Divide.addActionListener(new java.awt.event.ActionListener() {
@@ -374,7 +416,7 @@ public class Calculator extends javax.swing.JFrame {
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(times, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(minus, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Divide, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(Divide, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(backspace, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -484,7 +526,7 @@ public class Calculator extends javax.swing.JFrame {
             //only run if there was not a recent answer generated by hitting equals
             if (equalPressed == false){
                 
-                //this only happens right after a clear or the begining of the program
+                //this only happens right after a clear or the beginning of the program
                 if(calculation == 0)
                 {
                  answer = parsedText;
@@ -499,7 +541,7 @@ public class Calculator extends javax.swing.JFrame {
         }
         catch (NumberFormatException e) {}
         
-        calculation = 1; //refers to case 1 addtion  
+        calculation = 1; //refers to case 1 addition  
         jTextField1.setText(""); // clears text field
         equalPressed = false;
     }//GEN-LAST:event_AddActionPerformed
@@ -527,7 +569,7 @@ public class Calculator extends javax.swing.JFrame {
                 
                 //only run if there was not a recent answer generated by hitting equals
                 if (equalPressed == false){
-                    //this only happens right after a clear or the begining of the program
+                    //this only happens right after a clear or the beginning of the program
                     if(calculation == 0)
                     {
                      answer = parsedText;
@@ -558,7 +600,7 @@ public class Calculator extends javax.swing.JFrame {
 
             //only run if there was not a recent answer generated by hitting equals
             if (equalPressed == false){
-                //this only happens right after a clear or the begining of the program
+                //this only happens right after a clear or the beginning of the program
                 if(calculation == 0)
                 {
                  answer = parsedText;
@@ -588,7 +630,7 @@ public class Calculator extends javax.swing.JFrame {
 
             //only run if there was not a recent answer generated by hitting equals
             if (equalPressed == false){
-                //this only happens right after a clear or the begining of the program
+                //this only happens right after a clear or the beginning of the program
                 if(calculation == 0)
                 {
                  answer = parsedText;
@@ -613,12 +655,12 @@ public class Calculator extends javax.swing.JFrame {
             parsedText = Double.parseDouble(jTextField1.getText());
         }
         
-        //dont do anything if there is no calculations to do
+        //Don't do anything if there is no calculations to do
         if (calculation != 0)
         {
             answer = calculate(calculation, answer, parsedText);
             
-            jTextField1.setText(Double.toString(answer)); //converets double to string. 
+            jTextField1.setText(Double.toString(answer)); //Converts double to string. 
             
             equalPressed = true;
         }
@@ -636,7 +678,7 @@ public class Calculator extends javax.swing.JFrame {
                 StringBuilder back = new StringBuilder(jTextField1.getText());
                 //String builder creates empty String builder, which is used to store strings. 
                 //back is object of stringbuuilder.
-                back.deleteCharAt(number); //used to dekete a single a character from a spefcic postion. 
+                back.deleteCharAt(number); //used to delete a single a character from a certain position. 
                 store=back.toString();
                 jTextField1.setText(store);    
             }
@@ -648,11 +690,12 @@ public class Calculator extends javax.swing.JFrame {
         {
             //check if text box is empty
             if (jTextField1.getText().length() == 0 ){
+                
             jTextField1.setText("0.");
             }
             
             String temp = jTextField1.getText() + ".";
-            //check to make sure the modified string is a number elsewise
+            //check to make sure the modified string is a number else's
             if (Double.isNaN(Double.parseDouble(temp)) == false){
             jTextField1.setText(temp);
             }
@@ -665,7 +708,7 @@ public class Calculator extends javax.swing.JFrame {
             jTextField1.setText("0.");
         }
         
-        //a decimal symbol has been inserted, we cant insert the negative symbol for sure now
+        //a decimal symbol has been inserted, we can't insert the negative symbol for sure now
         cleared = false;
     }//GEN-LAST:event_decimialActionPerformed
 
@@ -675,7 +718,7 @@ public class Calculator extends javax.swing.JFrame {
      
         jTextField1.setText(jTextField1.getText() + "7"); //sets text field to 7 and places it next to number placed on screen.
         
-        //a number button has been pressed, we cant insert the negative symbol for sure now
+        //a number button has been pressed, we can't insert the negative symbol for sure now
         cleared = false;
     }//GEN-LAST:event_Number7ActionPerformed
 
@@ -684,7 +727,7 @@ public class Calculator extends javax.swing.JFrame {
      
         jTextField1.setText(jTextField1.getText() + "9"); //sets text field to 9 and places it next to number placed on screen.
         
-        //a number button has been pressed, we cant insert the negative symbol for sure now
+        //a number button has been pressed, we can't insert the negative symbol for sure now
         cleared = false;
     }//GEN-LAST:event_Number9ActionPerformed
 
@@ -693,7 +736,7 @@ public class Calculator extends javax.swing.JFrame {
      
         jTextField1.setText(jTextField1.getText() + "8"); //sets text field to 8 and places it next to number placed on screen.
         
-        //a number button has been pressed, we cant insert the negative symbol for sure now
+        //a number button has been pressed, we can't insert the negative symbol for sure now
         cleared = false;
     }//GEN-LAST:event_Number8ActionPerformed
 
@@ -702,7 +745,7 @@ public class Calculator extends javax.swing.JFrame {
      
         jTextField1.setText(jTextField1.getText() + "4");
         
-        //a number button has been pressed, we cant insert the negative symbol for sure now
+        //a number button has been pressed, we can't insert the negative symbol for sure now
         cleared = false;
     }//GEN-LAST:event_Number4ActionPerformed
 
@@ -711,7 +754,7 @@ public class Calculator extends javax.swing.JFrame {
      
         jTextField1.setText(jTextField1.getText() + "5");
         
-        //a number button has been pressed, we cant insert the negative symbol for sure now
+        //a number button has been pressed, we can't insert the negative symbol for sure now
         cleared = false;
     }//GEN-LAST:event_Number5ActionPerformed
 
@@ -720,7 +763,7 @@ public class Calculator extends javax.swing.JFrame {
         
         jTextField1.setText(jTextField1.getText() + "6");
         
-        //a number button has been pressed, we cant insert the negative symbol for sure now
+        //a number button has been pressed, we can't insert the negative symbol for sure now
         cleared = false;
     }
 
@@ -729,7 +772,7 @@ public class Calculator extends javax.swing.JFrame {
      
         jTextField1.setText(jTextField1.getText() + "1"); //sets text field to one and places it next to number placed on screen.
         
-        //a number button has been pressed, we cant insert the negative symbol for sure now
+        //a number button has been pressed, we can't insert the negative symbol for sure now
         cleared = false;
     }//GEN-LAST:event_Number1ActionPerformed
 
@@ -738,7 +781,7 @@ public class Calculator extends javax.swing.JFrame {
      
         jTextField1.setText(jTextField1.getText() + "2"); //sets text field to two and places it next to number that is on the screen
         
-        //a number button has been pressed, we cant insert the negative symbol for sure now
+        //a number button has been pressed, we can't insert the negative symbol for sure now
         cleared = false;
     }//GEN-LAST:event_Number2ActionPerformed
 
@@ -747,28 +790,28 @@ public class Calculator extends javax.swing.JFrame {
      
         jTextField1.setText(jTextField1.getText() + "3"); //sets text field 3 four and places it next to number placed on screen.
         
-        //a number button has been pressed, we cant insert the negative symbol for sure now
+        //a number button has been pressed, we can't insert the negative symbol for sure now
         cleared = false;
     }//GEN-LAST:event_Number3ActionPerformed
 
     private void NumberZeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumberZeroActionPerformed
         if (equalPressed == true){clear();} //reset if an answer was just generated
      
-        //dont add extra zeroes if the current text is zero
+        //Don't add extra zeroes if the current text is zero
         if (jTextField1.getText().equals("0") == false)
         {
             jTextField1.setText(jTextField1.getText() + "0"); //sets text field to 0 and places it next to number placed on screen.
         }
         
-        //a number button has been pressed, we cant insert the negative symbol for sure now
+        //a number button has been pressed, we can't insert the negative symbol for sure now
         cleared = false;
     }//GEN-LAST:event_NumberZeroActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
         jFrame1.setVisible(true); //makes it visible
-        //jFrame1.setSize(jFrame1.getPreferredSize()); //sets size to perffred size(or elese it will pop up as a small window)
-        jFrame1.setResizable(false); // makes it not resizable
+        //jFrame1.setSize(jFrame1.getPreferredSize()); //sets size to preferred size(or else it will pop up as a small window)
+        jFrame1.setResizable(false); // makes it not resize.  
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 	// </editor-fold> 
     
