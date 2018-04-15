@@ -1,3 +1,8 @@
 language: java
 rvm:
   -10.0
+
+jdk:
+  - oraclejdk8
+  - oraclejdk9
+  - openjdk7
